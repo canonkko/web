@@ -4,5 +4,28 @@ block variables
   - var title = 'Главная страница'
 
 block content
-  h1 Главная страница
-  .block
+  section.hero.section
+    a.btn-auth(href="#0") Авторизоваться
+    .author
+      .author__img
+        img(src='images/content/author.jpg', alt='Руслан Мерзляков')
+      h1.author__title Руслан Мерзляков
+      .author__subtitle Личный сайт веб разработчика
+      ul.author-social
+        li.author-social__item
+          a(href="https://vk.com/mruslanv" target="_blank").author-social__link
+        li.author-social__item
+          a(href="https://github.com/canonkko" target="_blank").author-social__link
+        li.author-social__item
+          a(href="#0" target="_blank").author-social__link
+      ul.author-links
+        li.author-links__item
+          a(href="#0").author-links__link Мои работы
+        li.author-links__item
+          a(href="#0").author-links__link Обо мне
+        li.author-links__item
+          a(href="#0").author-links__link Блог
+    .footer-container.hero__footer
+      p 
+        | &copy; Владимир Астахов | создано с любовью в LoftSchool | 2016
+      

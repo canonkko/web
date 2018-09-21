@@ -1,0 +1,135 @@
+.hero {
+  background: url("../../images/bg/hero_bg.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__footer {
+    bottom: 40px;
+    text-align: center;
+    @include roboto('light');
+  }
+}
+
+.btn-auth {
+  border-width: 1px;
+  border-color: #ffffff;
+  border-style: solid;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 27px;
+  position: absolute;
+  top: 24px;
+  right: 5.3%;
+  @include roboto('medium');
+}
+
+.author {
+  text-align: center;
+  background-color: rgba(28, 31, 41, 0.5);
+  width: 100%;
+  max-width: 380px;
+  padding: 2%;
+  padding-bottom: 85px;
+  position: relative;
+
+  &__img {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+    img {
+      max-width: 100%;
+    }
+
+  &__title {
+    font-size: 28px;
+    @include roboto('medium');
+  }
+
+  &__subtitle {
+    opacity: 0.8;
+    margin-bottom: 30px;
+  }
+
+  &-links {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    &__item {
+      flex-grow: 1;
+
+      &:nth-child(2) {
+        border-right: 2px solid rgba(222, 227, 231, 0.5);
+        border-left: 2px solid rgba(222, 227, 231, 0.5);
+      }
+    }
+    &__link {
+      display: block;
+      background-color: rgba(#004cd1, 0.85);
+      padding: 11px;
+      color: #fff;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(#043ea3, 0.85);
+      }
+    }
+  }
+}
+
+.author-social__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+
+  &:nth-child(1) {
+    .author-social__link {
+      background-image: inline-svg('vk', #0845b0);
+    }
+  }
+
+  &:nth-child(2) {
+    .author-social__link {
+      background-image: inline-svg('github', #0a44aa);
+
+      &:hover {
+        background-image: inline-svg('github', #0845b0);
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .author-social__link {
+      background-image: inline-svg('in', #0a44aa);
+
+      &:hover {
+        background-image: inline-svg('in', #0845b0);
+      }
+    }
+  }
+}
+
+.author-social__link {
+  width: 31px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+}
+
