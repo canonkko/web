@@ -5,27 +5,31 @@ block variables
 
 block content
   section.hero.section
-    a.btn-auth(href="#0") Авторизоваться
-    .author
-      .author__img
-        img(src='images/content/author.jpg', alt='Руслан Мерзляков')
-      h1.author__title Руслан Мерзляков
-      .author__subtitle Личный сайт веб разработчика
-      ul.author-social
-        li.author-social__item
-          a(href="https://vk.com/mruslanv" target="_blank").author-social__link
-        li.author-social__item
-          a(href="https://github.com/canonkko" target="_blank").author-social__link
-        li.author-social__item
-          a(href="#0" target="_blank").author-social__link
-      ul.author-links
-        li.author-links__item
-          a(href="#0").author-links__link Мои работы
-        li.author-links__item
-          a(href="#0").author-links__link Обо мне
-        li.author-links__item
-          a(href="#0").author-links__link Блог
-    .footer-container.hero__footer
+    .hero__btn
+      a.btn-auth(href="#0") Авторизоваться
+    .hero__user
+      .hero__row
+        .user
+          .user__img
+            img(src='images/content/author.jpg', alt='Руслан Мерзляков')
+          h1.user__title Руслан Мерзляков
+          .user__subtitle Личный сайт веб разработчика
+      ul.socials
+        li.socials__item
+          a(href="https://vk.com/mruslanv" target="_blank").socials__link
+        li.socials__item
+          a(href="https://github.com/canonkko" target="_blank").socials__link
+        li.socials__item
+          a(href="#0" target="_blank").socials__link
+      .hero__links
+        ul.user-links
+          li.user-links__item
+            a(href="#0").user-links__link Мои работы
+          li.user-links__item
+            a(href="#0").user-links__link Обо мне
+          li.user-links__item
+            a(href="#0").user-links__link Блог
+    .hero__footer
       p 
         | &copy; Владимир Астахов | создано с любовью в LoftSchool | 2016
       

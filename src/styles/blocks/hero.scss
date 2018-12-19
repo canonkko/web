@@ -6,9 +6,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &__row {
+    margin-bottom: 20px;
+  }
   &__footer {
-    bottom: 40px;
     text-align: center;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
     @include roboto('light');
   }
 }
@@ -26,7 +32,7 @@
   @include roboto('medium');
 }
 
-.author {
+.hero__user {
   text-align: center;
   background-color: rgba(28, 31, 41, 0.5);
   width: 100%;
@@ -34,7 +40,11 @@
   padding: 2%;
   padding-bottom: 85px;
   position: relative;
+}
 
+.user {
+  text-align: center;
+  color: #fff;
   &__img {
     display: inline-block;
     width: 140px;
@@ -55,71 +65,103 @@
 
   &__subtitle {
     opacity: 0.8;
-    margin-bottom: 30px;
+    
+  }
+}
+
+  
+
+.hero__links {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.user-links {
+  display: flex;
+  &__item {
+    flex-grow: 1;
+
+    &:nth-child(2) {
+      border-right: 2px solid rgba(222, 227, 231, 0.5);
+      border-left: 2px solid rgba(222, 227, 231, 0.5);
+    }
+  }
+  &__link {
+    display: block;
+    background-color: rgba(#004cd1, 0.85);
+    padding: 11px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(#043ea3, 0.85);
+    }
+  }
+}
+
+.socials {
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 12px;
+
+    &:nth-child(1) {
+      .socials__link {
+        background-image: inline-svg('vk', #0845b0);
+      }
+    }
+
+    &:nth-child(2) {
+      .socials__link {
+        background-image: inline-svg('github', #0a44aa);
+      }
+    }
+
+    &:nth-child(3) {
+      .socials__link {
+        background-image: inline-svg('in', #0a44aa);
+      }
+    }
   }
 
-  &-links {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    &__item {
-      flex-grow: 1;
+  &_white {
+    .socials__item {
+      &:nth-child(1) {
+        .socials__link {
+          background-image: inline-svg('vk', #fff);
 
+          &:hover {
+            background-image: inline-svg('vk', #0845b0);
+          }
+        }
+      }
       &:nth-child(2) {
-        border-right: 2px solid rgba(222, 227, 231, 0.5);
-        border-left: 2px solid rgba(222, 227, 231, 0.5);
+        .socials__link {
+          background-image: inline-svg('github', #fff);
+
+          &:hover {
+            background-image: inline-svg('github', #0845b0);
+          }
+        }
       }
-    }
-    &__link {
-      display: block;
-      background-color: rgba(#004cd1, 0.85);
-      padding: 11px;
-      color: #fff;
-      transition: background-color 0.3s ease;
+      &:nth-child(3) {
+        .socials__link {
+          background-image: inline-svg('in', #fff);
 
-      &:hover {
-        background-color: rgba(#043ea3, 0.85);
-      }
-    }
-  }
-}
-
-.author-social__item {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 12px;
-
-  &:nth-child(1) {
-    .author-social__link {
-      background-image: inline-svg('vk', #0845b0);
-    }
-  }
-
-  &:nth-child(2) {
-    .author-social__link {
-      background-image: inline-svg('github', #0a44aa);
-
-      &:hover {
-        background-image: inline-svg('github', #0845b0);
-      }
-    }
-  }
-
-  &:nth-child(3) {
-    .author-social__link {
-      background-image: inline-svg('in', #0a44aa);
-
-      &:hover {
-        background-image: inline-svg('in', #0845b0);
+          &:hover {
+            background-image: inline-svg('in', #0845b0);
+          }
+        }
       }
     }
   }
 }
 
-.author-social__link {
+.socials__link {
   width: 31px;
   height: 20px;
   display: block;

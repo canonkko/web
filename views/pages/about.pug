@@ -1,4 +1,108 @@
 extends ../main.layout.pug
 
 block content
-  h1 Страница обо мне
+  section.about-hero
+    .about-hero__socials
+      ul.socials.socials_white
+        li.socials__item
+          a(href="https://vk.com/mruslanv" target="_blank").socials__link
+        li.socials__item
+          a(href="https://github.com/canonkko" target="_blank").socials__link
+        li.socials__item
+          a(href="#0" target="_blank").socials__link
+    .about-hero__hamburger
+      a(href="#0").hamburger
+        span
+    .about-hero__user
+      .user
+          .user__img
+            img(src='images/content/author.jpg', alt='Руслан Мерзляков')
+          h1.user__title Руслан Мерзляков
+          .user__subtitle Личный сайт веб разработчика
+    .about-hero__arrow
+      a(href="#0").arrow-down
+
+
+  section.about-me
+    .about-me__row
+      .about-me__item
+        h2.h2 Обо мне
+        img(src="images/content/author.jpg", alt="Руслан Мерзляков")
+        h3.h3 Кто я
+        p.about-me__text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+        p.about-me__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+      .about-me__item
+        h3.h3 Чем я могу быть вам полезен
+        p.about-me__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        h4.h4 Frontend
+        ul.about-me__list
+          each val in ["HTML5", "CSS3", "JavaScript &amp; jQuery"]
+            li= val
+        h4.h4 Backend
+        ul.about-me__list
+          each val in ["PHP", "mySQL", "Node.js &amp; npm", "Mongo.db"]
+            li= val
+        h4.h4 WorkFlow
+        ul.about-me__list
+          each val in ["Git", "Gulp", "npm"]
+            li.about-me__skill= val
+  
+
+  section.map
+    .map__contacts
+      .contacts
+        h3.h3 Контакты
+        ul.contacts__list
+          li.contacts__item
+            .contacts__icon
+            //- img(src="images/icons/skype_n.svg", alt="Skype")
+            | canonkko
+          li.contacts__item
+            .contacts__icon
+            //- img(src="images/icons/phone_n.svg", alt="Телефон")
+            | +7 963 018 48 90
+          li.contacts__item
+            .contacts__icon
+            //- img(src="images/icons/envelope_n.svg", alt="E-mail")
+            | ruslankko@gmail.com
+          li.contacts__item
+            .contacts__icon
+            //- img(src="images/icons/map_n.svg", alt="Skype")
+            | Пермь
+  
+
+  footer.footer
+    .footer__body
+      .footer__item
+        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+      .footer__item
+        nav.menu
+          ul.menu__list
+            li
+              a(href="") Мои работы
+            li
+              a(href="") Обо мне
+            li
+              a(href="") Блог
+            li
+              a(href="") Авторизация
+        ul.socials.socials_white
+          li.socials__item
+            a(href="https://vk.com/mruslanv" target="_blank").socials__link
+          li.socials__item
+            a(href="https://github.com/canonkko" target="_blank").socials__link
+          li.socials__item
+            a(href="#0" target="_blank").socials__link
+      .footer__item
+        ul.footer-contacts
+          li
+            a(href="skype:canonkko?add") canonkko
+          li
+            a(href="mailto:ruslankko@gmail.com") ruslankko@gmail.com
+          li
+            a(href="tel:+79312009324") +7 931 200 93 24
+          li г. Пермь
+            
+    .footer__bottom
+      p &copy; Владимир Астахов | Создано с любовью в LoftSchool | 2018
+
