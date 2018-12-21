@@ -28,6 +28,11 @@ body {
 
 a {
   text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 ul {
@@ -38,7 +43,46 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  @include sansuswebissimo();
   margin: 0;
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: 63px;
+}
+
+.h3 {
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: rgba(71, 75, 87, 0.5);
+    width: 90px;
+    height: 3px;
+    margin: 20px auto 0;
+  }
+
+  &_blog {
+    text-align: left;
+    text-transform: none;
+    margin-bottom: 20px;
+    a {
+      color: $text-color;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.h4 {
+  font-size: 28px;
+  @include roboto('medium');
 }
 
 p {
@@ -46,8 +90,38 @@ p {
   padding: 0;
 }
 
-button[type="button"] {
+button {
   cursor: pointer;
+}
+
+.btn {
+  @include roboto('medium');
+  border: none;
+  min-height: 45px;
+  padding: 12px 20px;
+  background-color: $blue;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+
+  &:hover {
+    background-color: lighten($blue, 10%);
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &_trsp {
+    background-color: transparent;
+  }
+
+  &_link {
+    background-image: inline-svg('link', #fff);
+    padding-left: 50px;
+  }
 }
 
 .text-block {
